@@ -1,0 +1,10 @@
+| Archivo                                      | Propósito                                                |
+| -------------------------------------------- | -------------------------------------------------------- |
+| `.github/workflows/validate-wazuh-rules.yml` | Workflow principal de GitHub Actions                     |
+| `scripts/ci/check_rule_ids.py`               | Detector de conflictos de IDs y rango custom             |
+| `scripts/ci/validate_mitre.py`               | Validador de IDs MITRE ATT\&CK contra API oficial        |
+| `scripts/ci/run_logtest.py`                  | Ejecutor de pruebas funcionales vía `wazuh-logtest`      |
+| `scripts/ci/ruleset_quality.py`              | Linter semántico de calidad del ruleset                  |
+| `tests/test_cases.json`                      | Definición de casos de prueba                            |
+| `tests/logs/*.log`                           | Logs de ejemplo para validación funcional                |
+| `detections/rules/*.xml`                     | 3 reglas custom de ejemplo (Mimikatz, PowerShell, LSASS) |
