@@ -1,0 +1,8 @@
+[ ] Repo creado con estructura modular y README profesional
+[ ] docker compose up -d levanta el SIEM en un solo comando
+[ ] Windows 11 con Sysmon + Wazuh Agent reportando (verifica en Dashboard → Agents)
+[ ] Al menos 3 técnicas ATT&CK simuladas con Atomic Red Team
+[ ] 3 casos de uso documentados con: comando → regla → log → screenshot → playbook
+[ ] Reglas custom versionadas en detections/rules/ con mapeo MITRE
+[ ] Laboratorio aislado de la red de producción
+[ ] Sin credenciales/IPs reales en el historial de Git (git log -p | grep -i password para auditar)
