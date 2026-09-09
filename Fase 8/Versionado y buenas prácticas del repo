@@ -1,0 +1,10 @@
+# Flujo de trabajo con commits semánticos
+git add .
+git commit -m "feat(rules): add mimikatz LSASS detection T1003.001"
+git commit -m "docs(cases): CU-001 evidence and playbook"
+git commit -m "fix(docker): pin wazuh version 4.8.0"
+git push origin main
+
+# Protege ramas y agrega CI básico (opcional pero profesional)
+gh api repos/:owner/soc-lab/branches/main/protection -X PUT \
+  -f required_status_checks.strict=true
