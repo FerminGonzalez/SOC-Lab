@@ -1,0 +1,11 @@
+<!-- Basado en: github.com/SwiftOnSecurity/sysmon-config (v13)
+     Adaptado para SOC-Lab: sección FileCreate de Mimikatz habilitada -->
+<Sysmon schemaversion="4.82">
+  <EventFiltering>
+    <ProcessCreate onmatch="include">
+      <CommandLine condition="contains">sekurlsa</CommandLine>
+      <CommandLine condition="contains">lsadump</CommandLine>
+    </ProcessCreate>
+    ...
+  </EventFiltering>
+</Sysmon>
