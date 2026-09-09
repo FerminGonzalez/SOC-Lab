@@ -1,0 +1,3 @@
+A continuación te presento una pipeline completa de 5 jobs que se ejecutan automáticamente en cada push
+a main/dev y en cada Pull Request hacia main. Esto implementa el concepto de Wazuh Ruleset as Code (RaC)
+con validación funcional real usando wazuh-logtest.
