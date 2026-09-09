@@ -1,0 +1,4 @@
+docker exec wazuh-manager mkdir -p /var/ossec/etc/rules
+docker cp detections/rules/mimikatz-detection.xml wazuh-manager:/var/ossec/etc/rules/
+docker exec wazuh-manager /var/ossec/bin/wazuh-analysisd -t   # valida sintaxis
+docker restart wazuh-manager
