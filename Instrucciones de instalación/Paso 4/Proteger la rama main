@@ -1,0 +1,7 @@
+Para que los checks del CI sean obligatorios antes de mergear:
+Ve a Settings → Rules → Rulesets → New ruleset → New branch ruleset
+Nombre: Protect main
+Target branches: Add target → main
+En Require status checks to pass:
+Busca y marca: xml-lint, rule-id-conflicts, mitre-validation, wazuh-functional-test, ruleset-quality
+Guarda
