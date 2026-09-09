@@ -1,0 +1,6 @@
+*.pem
+*.key
+.env
+**/credentials
+*.evtx
+!screenshots/*.png
