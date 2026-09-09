@@ -1,0 +1,27 @@
+# Desde la raíz de tu repo
+unzip soc-lab-ci-package.zip -d .
+# O copia manualmente las carpetas
+
+
+soc-lab/
+├── .github/
+│   └── workflows/
+│       └── validate-wazuh-rules.yml
+├── scripts/
+│   └── ci/
+│       ├── check_rule_ids.py
+│       ├── validate_mitre.py
+│       ├── run_logtest.py
+│       └── ruleset_quality.py
+├── tests/
+│   ├── test_cases.json
+│   └── logs/
+│       ├── mimikatz_sekurlsa.log
+│       ├── powershell_encoded.log
+│       └── lsass_access.log
+├── detections/
+│   └── rules/
+│       ├── mimikatz-detection.xml
+│       ├── powershell-detection.xml
+│       └── lsass-access-detection.xml
+└── ...
