@@ -1,1 +1,0 @@
-mkdir -p docs scripts simulation docker detections/{rules,decoders} agents/{wazuh,sysmon} playbooks screenshots
