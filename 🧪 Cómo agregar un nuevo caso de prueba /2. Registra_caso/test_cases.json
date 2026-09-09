@@ -1,0 +1,9 @@
+{
+  "name": "certutil_download",
+  "description": "Detecta uso de certutil para descargar payloads (T1105)",
+  "log_file": "tests/logs/nuevo_ataque.log",
+  "expected_rule_id": "100103",
+  "expected_level": 8,
+  "expected_alert": true,
+  "mitre_technique": "T1105"
+}
