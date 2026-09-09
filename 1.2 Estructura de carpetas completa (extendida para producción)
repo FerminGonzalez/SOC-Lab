@@ -1,1 +1,35 @@
 mkdir -p docs scripts simulation docker detections/{rules,decoders} agents/{wazuh,sysmon} playbooks screenshots
+
+soc-lab/
+├── README.md
+├── LICENSE
+├── .gitignore
+├── docs/
+│   ├── architecture.md
+│   ├── network-topology.png          # Dibuja con draw.io / Excalidraw
+│   ├── detection-use-cases.md
+│   └── requirements.md
+├── docker/
+│   ├── docker-compose.yml
+│   └── .env
+├── agents/
+│   ├── wazuh/
+│   │   ├── wazuh-agent-linux.conf
+│   │   ├── wazuh-agent-windows.conf
+│   │   └── local_rules.xml
+│   └── sysmon/
+│       └── sysmon-config.xml
+├── scripts/
+│   ├── deploy-wazuh.sh
+│   ├── deploy-sysmon.ps1
+│   └── validate-telemetry.sh
+├── detections/
+│   ├── rules/
+│   │   └── mimikatz-detection.xml
+│   └── mitre-mapping.md
+├── simulation/
+│   ├── atomic-tests.ps1
+│   └── caldera-notes.md
+├── playbooks/
+│   └── incident-response-template.md
+└── screenshots/                       # Evidencia de detecciones
