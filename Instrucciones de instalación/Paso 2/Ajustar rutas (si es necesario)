@@ -1,0 +1,2 @@
+# En scripts/ci/*.py
+RULES_DIR = Path("detections/rules")   # ← ajusta si usas otra ruta
