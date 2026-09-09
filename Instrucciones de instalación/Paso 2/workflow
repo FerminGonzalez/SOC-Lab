@@ -1,0 +1,3 @@
+env:
+  CUSTOM_RULES_DIR: "detections/rules"   # ← ajusta
+  CUSTOM_DECODERS_DIR: "detections/decoders"
