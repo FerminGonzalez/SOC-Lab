@@ -1,0 +1,28 @@
+Job 1: xml-lint — Validación de sintaxis XML
+      Usa xmllint para garantizar que todos los archivos .xml en detections/rules/, detections/decoders/ y agents/ estén bien formados (well-formed). Un XML mal cerrado o con caracteres inválidos falla inmediatamente.
+Job 2: rule-id-conflicts — Verificación de IDs
+      Basado en el script oficial de Wazuh RaC , verifica:
+      Duplicados internos en un mismo archivo
+      Duplicados globales entre todos los archivos del repo
+      Rango válido: los IDs custom deben estar entre 100000 y 120000 
+Job 3: mitre-validation — Validación MITRE ATT&CK
+      Consulta la matriz oficial de MITRE vía API (raw.githubusercontent.com/mitre/cti) y verifica que cada <id> dentro de <mitre> exista realmente. Si no hay conectividad, usa un fallback con las técnicas más comunes.
+Job 4: wazuh-functional-test — Pruebas con wazuh-logtest 🧪
+      Este es el job más potente:
+      Levanta un contenedor real wazuh/wazuh-manager:4.8.0 como servicio
+      Espera a que wazuh-analysisd esté saludable
+      Copia tus reglas custom al contenedor
+      Reinicia el motor de análisis
+      Por cada caso en tests/test_cases.json, inyecta el log de prueba vía wazuh-logtest -q 
+      Parsea la salida y verifica:
+      ¿Se activó la regla esperada (expected_rule_id)?
+      ¿El nivel coincide (expected_level)?
+      ¿Se generó alerta (expected_alert)?
+      Genera un reporte JSON y sube artefactos
+Job 5: ruleset-quality — Linter semántico
+      Verifica buenas prácticas de Detection Engineering:
+Descripciones no vacías (mínimo 10 caracteres)
+level dentro de 0-16
+<mitre> mapping presente (warning si falta)
+Campos <field>, <match>, <regex> no vacíos
+Referencias circulares en <if_sid>
