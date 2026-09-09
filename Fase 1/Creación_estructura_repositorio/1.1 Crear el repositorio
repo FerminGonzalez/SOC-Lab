@@ -1,0 +1,7 @@
+# Opción A: desde la CLI de GitHub (gh)
+gh repo create soc-lab --public --description \
+  "SOC-Lab: Entorno reproducible de Security Operations Center para detección, análisis y respuesta (Blue Team)" \
+  --add-readme --license MIT
+
+# Clonar
+git clone https://github.com/FerminGonzalez/SOC-lab.git && cd soc-lab
