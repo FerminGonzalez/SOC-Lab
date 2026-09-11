@@ -1,0 +1,3 @@
+git add .
+git commit -m "feat(rules): add certutil download detection T1105"
+git push origin dev
