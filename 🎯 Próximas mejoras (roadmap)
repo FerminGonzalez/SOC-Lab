@@ -1,0 +1,4 @@
+Pre-commit hooks: instalar pre-commit local para ejecutar xml-lint y check_rule_ids.py antes de cada commit, evitando pushes fallidos.
+Coverage badge: agregar un badge de cobertura de reglas testeadas en el README.
+SOAR integration: al mergear a main, desplegar automáticamente las reglas al Wazuh manager de producción vía SSH .
+Sigma conversion: validar que las reglas Sigma convertidas a Wazuh XML mantengan la lógica original.
