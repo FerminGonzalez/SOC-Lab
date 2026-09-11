@@ -1,0 +1,7 @@
+| Síntoma                            | Causa                                 | Solución                                                                                    |
+| ---------------------------------- | ------------------------------------- | ------------------------------------------------------------------------------------------- |
+| `wazuh-functional-test` timeout    | El contenedor tarda en iniciar        | Aumenta `sleep 30` a `sleep 60` en el workflow                                              |
+| `wazuh-logtest` no encuentra regla | El decoder no mapea el campo correcto | Verifica que el log use el mismo nombre de campo que la regla (`win.eventdata.commandLine`) |
+| Rule ID conflict en PR             | ID duplicado con `main`               | Cambia el ID a uno nuevo en rango 100000-120000                                             |
+| MITRE validation falla             | ID de técnica inexistente             | Verifica en [attack.mitre.org](https://attack.mitre.org)                                    |
+| XML lint falla                     | Caracteres especiales no escapados    | Usa `&lt;`, `&gt;`, `&amp;` en XML                                                          |
