@@ -1,0 +1,5 @@
+✅ xml-lint — All XML files are well-formed.
+✅ rule-id-conflicts — All rule ID checks passed.
+✅ mitre-validation — All 5 MITRE ATT&CK IDs are valid.
+✅ wazuh-functional-test — All functional tests passed! (3/3)
+✅ ruleset-quality — Ruleset meets all quality gates.
